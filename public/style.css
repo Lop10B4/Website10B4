@@ -163,6 +163,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 /* Đảm bảo toàn bộ trang chiếm ít nhất 100% chiều cao của cửa sổ trình duyệt */
 html, body {
     height: 100%;
