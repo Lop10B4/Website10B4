@@ -10,16 +10,35 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         th, td {
-            padding: 8px;
+            padding: 12px;
             border: 1px solid #003c77;
+            text-align: left;
         }
+
         th {
+            background-color: #003c77;
+            color: #ffffff;
             cursor: pointer;
         }
+
         th:hover {
-            background-color: #003c77;
+            background-color: #002b5e;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
         }
     </style>
 </head>
@@ -41,81 +60,247 @@
         <table id="studentsTable">
             <thead>
                 <tr>
+                    <th>STT</th>
+                    <th>Họ</th>
                     <th>Tên</th>
-                    <th>Lớp</th>
                     <th>Ngày Sinh</th>
+                    <th>Lớp</th>
+                    <th>Quê quán</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Dữ liệu học sinh được sắp xếp theo thứ tự bảng chữ cái -->
                 <tr>
-                    <td>Trần Huỳnh Anh</td>
+                    <td></td>
+                    <td>Trần Huỳnh</td>
+                    <td>Anh</td>
+                    <td>21/12/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Nguyễn Bích Ngọc</td>
+                    <td></td>
+                    <td>Lê Phạm Quỳnh</td>
+                    <td>Anh</td>
+                    <td>02/02/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Trà Vinh</td>
                 </tr>
                 <tr>
-                    <td>Phạm Nhật Quang</td>
+                    <td></td>
+                    <td>Vòng Tuấn</td>
+                    <td>Anh</td>
+                    <td>27/09/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Đồng Nai</td>
                 </tr>
                 <tr>
-                    <td>Phạm Cao Nhã My</td>
+                    <td></td>
+                    <td>Phạm Ngọc Vàng</td>
+                    <td>Anh</td>
+                    <td>24/01/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Phạm Ngọc Vàng Anh</td>
+                    <td></td>
+                    <td>Nguyễn Thanh</td>
+                    <td>Giang</td>
+                    <td>13/09/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Bình Dương</td>
                 </tr>
                 <tr>
-                    <td>Lê Phương Vy</td>
+                    <td></td>
+                    <td>Vũ Xuân</td>
+                    <td>hà</td>
+                    <td>28/08/2008</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Lê Phạm Quỳnh Anh</td>
+                    <td></td>
+                    <td>Trương Thanh</td>
+                    <td>Hằng</td>
+                    <td>02/11/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Trần Nguyễn Trà My</td>
+                    <td></td>
+                    <td>Trương Lê Diệu</td>
+                    <td>Hiền</td>
+                    <td>23/11/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Bình Dương</td>
                 </tr>
                 <tr>
-                    <td>Vòng Tuấn Anh</td>
+                    <td></td>
+                    <td>Nguyễn Bích</td>
+                    <td>Huệ</td>
+                    <td>28/06/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Đinh Công Tình</td>
+                    <td></td>
+                    <td>Trương Thị Lý</td>
+                    <td>Hương</td>
+                    <td>14/02/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Nguyễn Thị Hải Yến</td>
+                    <td></td>
+                    <td>Trần Hà</td>
+                    <td>Linh</td>
+                    <td>12/06/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Hà TĨnh</td>
                 </tr>
                 <tr>
-                    <td>Trương Lê Diệu Hiền</td>
+                    <td></td>
+                    <td>Bùi Khánh</td>
+                    <td>Ly</td>
+                    <td>09/08/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>Bình Dương</td>
                 </tr>
                 <tr>
-                    <td>Lưu Đặng Thuỳ Trâm</td>
+                    <td></td>
+                    <td>Võ Minh</td>
+                    <td>Đăng</td>
+                    <td>25/09/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
                 </tr>
                 <tr>
-                    <td>Bùi Nguyễn Hà Vy</td>
+                    <td></td>
+                    <td>Nguyễn Lê Thảo</td>
+                    <td>Ly</td>
+                    <td>24/10/2009</td>
                     <td>10B4</td>
-                    <td>01/01/2009</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Phạm cao Nhã</td>
+                    <td>My</td>
+                    <td>09/12/2009</td>
+                    <td>10B4</td>
+                    <td>Bến Tre</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Trần Nguyễn Trà</td>
+                    <td>My</td>
+                    <td>20/09/2009</td>
+                    <td>10B4</td>
+                    <td>Nghệ An</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Phạm Thanh</td>
+                    <td>Ngân</td>
+                    <td>29/06/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Nguyễn Bích</td>
+                    <td>Ngọc</td>
+                    <td>14/09/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Trần Thảo</td>
+                    <td>Nguyên</td>
+                    <td>10/06/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Lê Quang</td>
+                    <td>Phát</td>
+                    <td>10/11/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Nguyễn Hoàng</td>
+                    <td>Phú</td>
+                    <td>29/11/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Phạm Nhật</td>
+                    <td>Quang</td>
+                    <td>23/07/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Lê Văn</td>
+                    <td>Tiến</td>
+                    <td>08/04/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Đinh Công</td>
+                    <td>Tình</td>
+                    <td>08/02/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Lưu Đặng Thuỳ</td>
+                    <td>Trâm</td>
+                    <td>09/11/2009</td>
+                    <td>10B4</td>
+                    <td>Đắk Lắk</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Nguyễn Bảo</td>
+                    <td>Trân</td>
+                    <td>14/05/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Bùi NGuyễn Hà</td>
+                    <td>Vy</td>
+                    <td>02/11/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hà Nội</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Lê Phương</td>
+                    <td>Vy</td>
+                    <td>06/11/2009</td>
+                    <td>10B4</td>
+                    <td>TP. Hồ Chí Minh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Nguyễn Thị Hải</td>
+                    <td>Yến</td>
+                    <td>18/10/2009</td>
+                    <td>10B4</td>
+                    <td>Bình Dương</td>
                 </tr>
             </tbody>
         </table>
@@ -128,13 +313,16 @@
             const table = document.getElementById("studentsTable");
             const rows = Array.from(table.querySelectorAll("tbody tr"));
             rows.sort((rowA, rowB) => {
-                const nameA = rowA.querySelector("td").textContent.trim().toLowerCase();
-                const nameB = rowB.querySelector("td").textContent.trim().toLowerCase();
+                const nameA = rowA.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
+                const nameB = rowB.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
                 return nameA.localeCompare(nameB);
             });
             const tbody = table.querySelector("tbody");
             tbody.innerHTML = "";
-            rows.forEach(row => tbody.appendChild(row));
+            rows.forEach((row, index) => {
+                row.querySelector("td:nth-child(1)").textContent = index + 1;
+                tbody.appendChild(row);
+            });
         }
 
         window.onload = function() {
