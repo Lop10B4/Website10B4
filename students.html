@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lớp 10B4 (2024-2025) - Danh Sách Học Sinh</title>
     <link rel="stylesheet" href="public/style.css">
+    <style>
+        /* Style cho bảng và tiêu đề cột */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #003c77;
+        }
+        th {
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #003c77;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +38,7 @@
     </header>
     <main>
         <h2>Danh Sách Học Sinh</h2>
-        <table>
+        <table id="studentsTable">
             <thead>
                 <tr>
                     <th>Tên</th>
@@ -30,7 +47,6 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Thêm dữ liệu học sinh vào đây -->
                 <tr>
                     <td>Trần Huỳnh Anh</td>
                     <td>10B4</td>
@@ -86,12 +102,44 @@
                     <td>10B4</td>
                     <td>01/01/2009</td>
                 </tr>
-                <!-- Thêm các học sinh khác -->
+                <tr>
+                    <td>Trương Lê Diệu Hiền</td>
+                    <td>10B4</td>
+                    <td>01/01/2009</td>
+                </tr>
+                <tr>
+                    <td>Lưu Đặng Thuỳ Trâm</td>
+                    <td>10B4</td>
+                    <td>01/01/2009</td>
+                </tr>
+                <tr>
+                    <td>Bùi Nguyễn Hà Vy</td>
+                    <td>10B4</td>
+                    <td>01/01/2009</td>
+                </tr>
             </tbody>
         </table>
     </main>
     <footer>
         <p>&copy; 2024-2025 Lớp 10B4</p>
     </footer>
+    <script>
+        function sortTable() {
+            const table = document.getElementById("studentsTable");
+            const rows = Array.from(table.querySelectorAll("tbody tr"));
+            rows.sort((rowA, rowB) => {
+                const nameA = rowA.querySelector("td").textContent.trim().toLowerCase();
+                const nameB = rowB.querySelector("td").textContent.trim().toLowerCase();
+                return nameA.localeCompare(nameB);
+            });
+            const tbody = table.querySelector("tbody");
+            tbody.innerHTML = "";
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        window.onload = function() {
+            sortTable();
+        }
+    </script>
 </body>
 </html>

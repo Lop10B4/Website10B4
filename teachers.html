@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lớp 10B4 (2024-2025) - Danh Sách Giáo Viên</title>
     <link rel="stylesheet" href="public/style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #003c77;
+        }
+        th {
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #003c77;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,10 +37,10 @@
     </header>
     <main>
         <h2>Danh Sách Giáo Viên</h2>
-        <table>
+        <table id="teachersTable">
             <thead>
                 <tr>
-                    <th>Số Thứ Tự</th>
+                    <th>STT</th>
                     <th>Tên</th>
                     <th>Môn Học</th>
                 </tr>
@@ -93,5 +109,23 @@
     <footer>
         <p>&copy; 2024-2025 Lớp 10B4</p>
     </footer>
+    <script>
+        function sortTeachersTable() {
+            const table = document.getElementById("teachersTable");
+            const rows = Array.from(table.querySelectorAll("tbody tr"));
+            rows.sort((rowA, rowB) => {
+                const nameA = rowA.querySelectorAll("td")[1].textContent.trim().toLowerCase();
+                const nameB = rowB.querySelectorAll("td")[1].textContent.trim().toLowerCase();
+                return nameA.localeCompare(nameB);
+            });
+            const tbody = table.querySelector("tbody");
+            tbody.innerHTML = "";
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        window.onload = function() {
+            sortTeachersTable();
+        }
+    </script>
 </body>
 </html>
